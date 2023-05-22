@@ -5,12 +5,12 @@ const controller = require('../controllers/indexController');
 
 router.get('/', controller.showHomepage);
 
-// router.get('/createTables', (req, res) =>{
-//     let models = require('./models');
-//     models.sequelize.sync().then(() => {
-//         res.send('table created!');
-//     });
-// })
+router.get('/createTables', (req, res) =>{
+    let models = require('../models');
+    models.sequelize.sync().then(() => {
+        res.send('table created!');
+    });
+})
 
 router.get('/:page', controller.showPage);
 
