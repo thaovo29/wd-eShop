@@ -104,7 +104,7 @@ controller.showResetPassword = (req, res) => {
 controller.resetPassword = async (req, res) => {
     let email = req.body.email;
     let token = req.body.token;
-    let bcrypt = require('bcrypt');
+    let bcrypt = require('bcryptjs');
     let password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8));
     console.log(req.body.password)
     await models.User.update({password}, {where: {email}});

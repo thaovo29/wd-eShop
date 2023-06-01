@@ -4,7 +4,7 @@
 module.exports = {
     async up(queryInterface, Sequelize) {
         const models = require('../models');
-        const bcrypt = require('bcrypt');
+        const bcrypt = require('bcryptjs');
 
         let users = await models.User.findAll();
         let updatedUsers = [];
