@@ -1,5 +1,4 @@
 {
-  "use_env_variable": "POSTGRESQL_URL", 
   "development": {
     "username": "thaovo",
     "password": "12TlO2gPIcNgTX7qLrfzzkXv7fKsnbtY",
@@ -21,10 +20,7 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "thaovo",
-    "password": "12TlO2gPIcNgTX7qLrfzzkXv7fKsnbtY",
-    "database": "eshop_4gwp",
-    "host": "dpg-chldlj67avj217bt8f6g-a.oregon-postgres.render.com",
+    "use_env_variable": "POSTGRESQL_URL", 
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
