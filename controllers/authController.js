@@ -74,7 +74,7 @@ controller.forgotPassword = async (req, res) => {
     if (user) {
         const { sign } = require('./jwt');
         const host = req.header('host');
-        const resetLink = `${req.protocol}://${host}/users/reset?token=${sign(email)}&email=${email}`;
+        const resetLink = `${req.protocol}://${host}/users/reset?email=${email}&token=${sign(email)}&`;
         const { sendForgotPasswordMail } = require('./mail')
         sendForgotPasswordMail(user, host, resetLink)
             .then((result) => {

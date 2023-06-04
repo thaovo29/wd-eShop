@@ -74,7 +74,7 @@ passport.use('local-register', new LocalStrategy({
             email: email, 
             password: bcrypt.hashSync(password, bcrypt.genSaltSync(8)),
             firstName: req.body.firstName,
-            lasName: req.body.lastName,
+            lastName: req.body.lastName,
             mobile: req.body.mobile
         });
 
